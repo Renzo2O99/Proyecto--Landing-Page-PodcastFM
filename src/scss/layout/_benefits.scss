@@ -1,0 +1,18 @@
+@use "../custom" as *;
+@use "base/mixins" as mix;
+
+.benefits {
+    h2 {
+        @include mix.headingBorderBottom($secondary, $white);
+    }
+
+    .image {
+        @include media-breakpoint-up(md) {
+            transition: transform 0.4s ease-in-out;
+        }
+
+        &:hover {
+            transform: rotate(8deg) scale(1.1);
+        }
+    }
+}

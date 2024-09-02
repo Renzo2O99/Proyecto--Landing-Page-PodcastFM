@@ -1,0 +1,72 @@
+@use "../custom" as *;
+
+// Mixins Bootstrap
+@mixin bgImage($color, $url) {
+    background-image: linear-gradient(
+            transparentize($color, 0.3%) 0%,
+            transparentize($color, 0.3%) 100%
+        ),
+        url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+@mixin headingBorderBottom($textColor, $lineColor) {
+    color: $textColor;
+    display: inline-block;
+    margin-top: 5rem;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+        font-size: 3.8rem;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        height: 1.1rem;
+        width: 100%;
+        margin: -1.4rem 0 0 0;
+        background-color: $lineColor;
+    }
+}
+
+@mixin bgIcon($url) {
+    background-image: url($url);
+    background-size: 10rem;
+    background-position: 50% 2rem;
+    background-repeat: no-repeat;
+}
+
+// Mixins Anteriores
+
+@mixin grid($repeat-columns, $gap: 0) {
+    display: grid;
+    grid-template-columns: repeat($repeat-columns, 1fr);
+    gap: $gap;
+}
+
+@mixin child($number) {
+    &:nth-child(#{$number}) {
+        @content;
+    }
+}
+
+@mixin child-impar-par($number) {
+    @if $number == 1 {
+        &:nth-child(odd) {
+            @content;
+        }
+    } @else if $number == 2 {
+        &:nth-child(even) {
+            @content;
+        }
+    }
+}
+
+@mixin hover() {
+    &:hover {
+        @content;
+    }
+}

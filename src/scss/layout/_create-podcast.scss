@@ -1,0 +1,9 @@
+@use "../custom" as *;
+@use "base/mixins" as mix;
+
+.create-podcast {
+    h2 {
+        text-align: center;
+        @include mix.headingBorderBottom($secondary, $primary);
+    }
+}

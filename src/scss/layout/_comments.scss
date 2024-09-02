@@ -1,0 +1,30 @@
+@use "../custom" as *;
+@use "base/mixins" as mix;
+
+.comments {
+    h2 {
+        @include mix.headingBorderBottom($secondary, $primary);
+    }
+
+    .comment {
+        border: 0.5rem solid $secondary;
+        border-radius: 1rem;
+        font-size: 1.6rem;
+        padding: 2rem 2rem 2rem 6rem;
+        position: relative;
+
+        &::before {
+            display: block;
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            content: "";
+            width: 5rem;
+            height: 5rem;
+            background-image: url("../img/icons/comilla.svg");
+            background-size: 4rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+}
