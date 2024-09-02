@@ -35,7 +35,7 @@ $separacion: 5rem;
     }
 
     &.business {
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(xl) {
             z-index: 100;
             margin-top: -#{$separacion};
             margin-bottom: -#{$separacion};

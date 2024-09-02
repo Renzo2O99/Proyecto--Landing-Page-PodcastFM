@@ -19,7 +19,11 @@
 
     @include media-breakpoint-up(md) {
         margin-top: 0;
-        font-size: 3.8rem;
+        font-size: 2.9rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 4.2rem;
     }
 
     &::after {

@@ -32,7 +32,7 @@
 
     border: 1px solid $white;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         display: block;
     }
 }
