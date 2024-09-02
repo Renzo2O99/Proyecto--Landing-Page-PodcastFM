@@ -2,7 +2,7 @@
 @use "base/mixins" as mix;
 
 .site-header {
-    @include mix.bgImage($secondary, "../../../build/img/full/header.jpg");
+    @include mix.bgImage($secondary, "../img/full/header.jpg");
 
     .logo {
         max-width: 20rem;
